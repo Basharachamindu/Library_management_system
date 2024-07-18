@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins&display=swap");
+/*css variables*/
+:root {
+   --primarycolor: #2f3061;
+   --mainWhite: #fff;
+   --mainhover: #29339b;
+   --offWhite: #f7f7f7;
+   --mainBlack: #222;
+   --mainGrey: #ececec;
+   --darkGrey: #afafaf;
+   --mainTransition: all 0.3s linear;
+   --mainSpacing: 0.2rem;
+   --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
+   --darkShadow: 7px 7px 5px 0 rgba(0, 0, 0, 0.5);
+}
+html {
+   scroll-behavior: smooth;
+}
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: "Lato", sans-serif;
+   color: var(--mainBlack);
+   background: var(--offWhite);
+   line-height: 1.4;
+   font-size: 1rem;
+}
+/*Global Style*/
+img {
+   width: 100%;
+   display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Poppins", sans-serif;
+   margin-bottom: 1.25rem;
+   letter-spacing: var(--mainSpacing);
+}
+h1 {
+   font-size: 3.3rem;
+}
+h2 {
+   font-size: 2.3rem;
+}
+h3 {
+   font-size: 2rem;
+}
+h4 {
+   font-size: 1.2rem;
+}
+p {
+   margin-bottom: 1.25rem;
+   line-height: 2;
+   font-weight: 300;
+}
+a {
+   text-decoration: none;
+}
+.btn-white,
+.btn-primary {
+   text-transform: uppercase;
+   letter-spacing: var(--mainSpacing);
+   color: var(--mainWhite);
+   border: 2px solid var(--mainWhite);
+   padding: 0.9rem 1.6rem;
+   display: inline-block;
+   transition: var(--mainTransition);
+   cursor: pointer;
+   
+   
+}
+.btn-primary {
+   background: var(--primarycolor);
+   color: var(--mainWhite);
+   border-color: var(--primarycolor);
+}
+.btn-primary:hover {
+   background: var(--mainhover);
+   color: var(--mainWhite);
+}
+.btn-white:hover {
+   background: var(--mainWhite);
+   color: var(--primarycolor);
+   border-color: var(--mainhover);
+}
+.section {
+   padding-top: 1.5rem;
+   padding-bottom: 3rem;
+}
+.title-text {
+   margin-bottom: 2rem;
+}
+.title {
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 2.6rem;
+   letter-spacing: 0.5rem;
+}
+.subtitle {
+   color: var(--primarycolor);
+}
+.section-center {
+   width: 85vw;
+   margin: 1.5rem auto 1.5rem auto;
+   max-width: 1170px;
+   padding: 0 0.2rem;
+}
+/*End Of Global Style*/
+
+/* navbar */
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #fff; /* Change background color to white */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for elevation */
+   z-index: 1000;
+   transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+.nav-link {
+   
+   display: block;
+   padding: 1rem 2rem;
+   color: var(--mainBlack);
+   text-transform: capitalize;
+   font-weight: bold;
+   letter-spacing: var(--mainSpacing);
+   transition: var(--mainTransition);
+}
+
+.nav-links {
+ 
+   height: 330px;
+   overflow: hidden;
+   transition: var(--mainTransition);
+}
+
+@media screen and (min-width: 992px) {
+   .nav-toggle {
+      
+      display: none;
+   }
+   .nav-links {
+    
+      display: flex;
+      height: auto;
+   }
+   .nav-icons {
+    
+      display: flex;
+   }
+   .nav-center {
+     
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+   }
+   .nav-link {
+    
+      padding: 0;
+   }
+   .nav-link:hover {
+     
+      color: var(--darkGrey);
+      transform: translateY(-10%);
+   }
+   .navbar {
+    
+      padding: 1rem 2rem;
+   }
+   .nav-link {
+     
+      margin-right: 0.7rem;
+   }
+   .nav-center {
+    
+      width: 100%;
+   }
+   .nav-icon {
+     
+      margin-right: 0.7rem;
+      color: var(--primarycolor);
+      font-size: 1.2rem;
+      transition: var(--mainTransition);
+   }
+   .nav-icon:hover {
+     
+      color: var(--darkGrey);
+      transform: translateY(-10%);
+   }
+}
+
+/*End Of Navbar*/
+
+/*Banner*/
+.header {
+   min-height: 100vh;
+   background: linear-gradient(rgba(13, 14, 14, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../images/cover.jpg") 0% 0% / cover no-repeat fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.header-banner {
+   text-align: center;
+   color: var(--mainWhite);
+   padding: 0.2rem;
+}
+.header-title {
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   margin-bottom: 2rem;
+   letter-spacing: 0.4rem;
+}
+.header-text {
+   width: 70%;
+   margin: 0 auto;
+   letter-spacing: var(--mainSpacing);
+   font-weight: 400;
+   margin-bottom: 2rem;
+}
+@media screen and (max-width: 778px) {
+   .hero {
+      width: 100%;
+      flex-wrap: wrap;
+      background-position: center;
+   }
+   .hero-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+   }
+   .hero-text {
+      width: 100%;
+   }
+}
+/*End Of hero element*/
+
+/*about*/
+.about {
+   background: var(--offWhite);
+   min-height: 85vh;
+}
+.about-img,
+.about-info {
+   margin-bottom: 3rem;
+}
+.about-info h3 {
+   text-transform: uppercase;
+}
+.about-img img {
+   box-shadow: var(--lightShadow);
+   background: rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 992px) {
+   .about-center {
+      display: flex;
+      justify-content: space-between;
+   }
+   .about-img,
+   .about-info {
+      flex: 0 0 calc(50% - 1rem);
+      margin-bottom: 0;
+      align-self: center;
+   }
+}
+/*End Of about*/
+
+/*footer*/
+.footer {
+   background: var(--mainBlack);
+   color: var(--mainWhite);
+   text-align: center;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   padding-bottom: 0.5rem;
+}
+.footer-icons {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 1.5rem;
+   flex-wrap: wrap;
+}
+.footer-icon {
+   font-size: 1.5rem;
+   margin-right: 1rem;
+   color: var(--mainWhite);
+   transition: var(--mainTransition);
+}
+.footer-icon:hover {
+   color: #2691d9;
+   transform: translateY(-10%);
+}
+.copyright {
+   text-transform: capitalize;
+   letter-spacing: var(--mainSpacing);
+}
+/*End footer*/
+
+/*Insert Info*/
+.wrapper {
+   max-width: 500px;
+   width: 100%;
+   height: auto;
+   background: #fff;
+   margin: 2rem auto;
+   box-shadow: var(--darkShadow);
+   padding: 30px;
+   padding-top: 15px;
+}
+
+.wrapper .title {
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 25px;
+   text-transform: uppercase;
+   text-align: center;
+   letter-spacing: 3px;
+}
+
+.wrapper .form {
+   width: 100%;
+}
+
+.wrapper .form .inputfield {
+   margin-bottom: 15px;
+   display: flex;
+   align-items: center;
+}
+
+.wrapper .form .inputfield label {
+   width: 200px;
+   color: var(--mainBlack);
+   margin-right: 10px;
+   font-size: 14px;
+   font-weight: bold;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea {
+   width: 100%;
+   outline: none;
+   border: 1px solid #d5dbd9;
+   font-size: 15px;
+   padding: 8px 10px;
+   border-radius: 3px;
+   transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea {
+   width: 100%;
+   height: 100px;
+   resize: none;
+}
+
+.wrapper .form .inputfield .custom_select {
+   position: relative;
+   width: 100%;
+   height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before {
+   content: "";
+   position: absolute;
+   top: 12px;
+   right: 10px;
+   border: 8px solid;
+   border-color: #d5dbd9 transparent transparent transparent;
+   pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select {
+   appearance: none;
+   outline: none;
+   width: 100%;
+   height: 100%;
+   border: 0px;
+   padding: 8px 10px;
+   font-size: 15px;
+   border: 1px solid #d5dbd9;
+   border-radius: 3px;
+}
+
+.wrapper .form .inputfield .btn {
+   width: 100%;
+   padding: 8px 10px;
+   font-size: 17px;
+   text-transform: uppercase;
+   border: 0px;
+   margin-top: 1rem;
+   background: var(--primarycolor);
+   color: #fff;
+   cursor: pointer;
+   border-radius: 4px;
+   outline: none;
+}
+.wrapper .form .inputfield:last-child {
+   margin-bottom: 0;
+}
+.second-container .home-btn {
+   display: flex;
+   justify-content: center;
+   text-transform: uppercase;
+   letter-spacing: var(--mainSpacing);
+   color: var(--mainWhite);
+   margin-top: 0.7rem;
+   padding: 0.5rem 0.5rem;
+   background-color: var(--mainBlack);
+   cursor: pointer;
+   border-radius: 5px;
+}
